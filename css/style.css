@@ -30,6 +30,13 @@ nav {
 }
 .nav-brand {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#hamburger {
+  font-size: 20px;
+  color: white;
+  display: none;
 }
 .nav-menu {
   gap: 27px;
@@ -48,12 +55,8 @@ nav {
   color: rgba(255, 255, 255, 1);
 }
 
-.nav-text {
-  padding: 154px 0 0 200px;
-}
 .nav-text__h1 {
   width: 457px;
-  height: 275px;
   font-family: Poppins;
   font-weight: 700;
   font-size: 64px;
@@ -63,8 +66,6 @@ nav {
 }
 .nav-text__p {
   width: 456px;
-  height: 83px;
-
   font-family: Poppins;
   font-weight: 500;
   font-size: 16px;
@@ -72,16 +73,14 @@ nav {
   letter-spacing: 0%;
   color: rgba(139, 142, 153, 1);
 }
-.nav-img-1 {
-  padding-top: 47px;
-}
+
 .nav-img {
   display: flex;
-  gap: 183px;
+  justify-content: center;
+  padding: 102px 142px;
+  align-items: center;
 }
-.nav-img__img {
-  padding-top: 102px;
-}
+
 .carts {
   display: flex;
   gap: 20px;
@@ -121,7 +120,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 386px 0 135px;
   gap: 40px;
 }
 
@@ -158,27 +157,17 @@ nav {
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .card img {
-    width: 180px;
-  }
-}
 .apple-watch {
   background-color: #f1f1f1;
 }
 
 .product-cards {
   font-family: "Segoe UI", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   gap: 49px;
+  padding: 65px 0 69px;
+  justify-content: center;
 }
 
 .product-card {
@@ -186,9 +175,7 @@ nav {
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 334px;
-  height: 330px;
   position: relative;
-  padding-bottom: 20px;
   text-align: center;
 }
 .product-card:hover {
@@ -353,4 +340,74 @@ nav {
   color: white;
   text-align: center;
   padding: 20px 0;
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .product-cards {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+}
+@media (max-width: 1000px) {
+  .nav-img {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+@media (max-width: 750px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .product-cards {
+    grid-template-columns: auto;
+  }
+  .nav-brand {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .active {
+    display: flex;
+  }
+  #hamburger {
+    display: block;
+  }
+}
+@media (max-width: 510px) {
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .nav-img-1 {
+    width: 100%;
+  }
+  .nav-img__img {
+    width: 100%;
+  }
+  .nav-text__h1 {
+    width: 100%;
+  }
+  .nav-text__p {
+    width: 100%;
+  }
+}
+@media (max-width: 402px) {
+  .product-card {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 300px) {
+  .product-card__img {
+    width: 100%;
+  }
 }
